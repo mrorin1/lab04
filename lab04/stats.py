@@ -13,7 +13,7 @@ def parse_record(line: str) -> dict:
         temp = float(temp_str)
     except ValueError:
         raise ValueError(f"Температура не число флоат ")
-    return {"city": city, "temp": temp, "date": date}
+    return {"city": city, "temperature": temp, "date": date}
 
 def read_valid(lines: list[str]) -> list[dict]:
     rec = []
