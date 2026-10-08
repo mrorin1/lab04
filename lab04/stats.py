@@ -29,7 +29,7 @@ def _mean_by_city(records: list[dict]) -> dict:
     total: dict[str, float] = {}
     count: dict[str, int] = {}
     for r in records:
-        total[r["city"]] = total.get(r["city"], 0.0) + r["temp"]
+        total[r["city"]] = total.get(r["city"], 0.0) + r["temperature"]
         count[r["city"]] = count.get(r["city"], 0) + 1
     return {city: total[city] / count[city] for city in total}
 
